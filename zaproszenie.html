@@ -12,23 +12,31 @@
     <div id="zaproszenie">
         <h1>ZAPROSZENIE</h1>
         <h2>GRATULACJE</h2>
-        <p>Jeśli to widzisz to znaczy ze zostałeś zaproszony na <span>urodzinowe przyjecie Patrycji i Szymona</span></p>
-        <p><span>Przyjecie</span> odbedzie sie 11.03.2023r. <br>pod adresem Żeromskiego 54 w Rogowie</p>
+        <p>Jeśli to widzisz to znaczy ze zostałeś zaproszony na <span>przyjecie urodzinowe Patrycji i Szymona</span></p>
+        <p><span>imprezka</span> odbedzie sie 11.03.2023r. <br>pod adresem Żeromskiego 54 w Rogowie</p>
         <p>Daj znać jeśli tu dotarłeś</p>
-        <p>Liczę na Twoją obecność</p>
+        <p>Liczymy na Twoją obecność</p>
 
     </div>
 
 <script>
+let f = () => {
+    let audio = new Audio('./src/music.mp3');
+    audio.play();
+    document.querySelector('body').removeEventListener('click', f)
+    document.querySelector('body').removeEventListener('touchstart', f)
+}
 let colors = ["#0e5ec7", "#bf0254", "#02bf05", "#d60000", "#7600d6"]
-let audio = new Audio('../src/harnas.mp3');
-audio.play();
+document.querySelector('body').addEventListener('click',  f)
+document.querySelector('body').addEventListener('touchstart', f)
+document.querySelector('body').click()
+
 let i = 0 
 setInterval(() => {
     document.querySelector("#zaproszenie").style.backgroundColor = colors[i]
     i++
     if(i == colors.length) i = 0
-}, 517)
+}, 706)
 </script>
 </body>
 </html>
