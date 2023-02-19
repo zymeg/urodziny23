@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#zaproszenie {
+  width: 100%;
+  height: 100vh;
+  color: #ddd;
+  background: #7600d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 1rem;
+  font-family: "Roboto Serif", sans-serif;
+}
+#zaproszenie * {
+  margin: 1rem auto;
+}
+#zaproszenie h1 {
+  font-size: 4.5rem;
+  letter-spacing: 0.9rem;
+  font-weight: 300;
+}
+#zaproszenie h2 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 400;
+  margin: 2rem auto;
+}
+#zaproszenie p {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 2.5rem;
+}
+#zaproszenie p span {
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 1.7rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  #zaproszenie {
+    padding: 0.2rem;
+  }
+  #zaproszenie * {
+    margin: 0.7rem;
+  }
+  #zaproszenie h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.4rem;
+  }
+  #zaproszenie h2 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  #zaproszenie p {
+    line-height: 2rem;
+  }
+}/*# sourceMappingURL=zaproszenie.css.map */

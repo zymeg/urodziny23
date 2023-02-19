@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+#title {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  #title {
+    height: 13vh;
+  }
+}
+#title h1 {
+  color: #ddd;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3.6rem;
+  letter-spacing: 0.7rem;
+}
+@media only screen and (max-width: 600px) {
+  #title h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.game {
+  width: 100%;
+  height: 65vh;
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  .game {
+    height: 45vh;
+  }
+}
+.game > .gameStart {
+  width: 100%;
+  height: 100%;
+  padding: 20vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .game > .gameStart {
+    padding: 0;
+  }
+}
+.game > .gameStart > .gameStartBtn {
+  background: #335577;
+  width: 70%;
+  cursor: pointer;
+  color: #ddd;
+  border-radius: 5rem;
+  text-align: center;
+  font-size: 2.7rem;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.3rem;
+  padding: 1.6rem;
+  transition: 0.4s;
+}
+.game > .gameStart > .gameStartBtn:hover {
+  background: #224466;
+  color: #dff;
+  font-size: 2.8rem;
+  letter-spacing: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .game > .gameStart > .gameStartBtn {
+    width: 90%;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+  }
+  .game > .gameStart > .gameStartBtn:hover {
+    font-size: 2.1rem;
+    letter-spacing: 0.3rem;
+  }
+}
+.game .gameProgress {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+.game .gameProgress .opponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .opponent {
+    margin: 0 0.3rem;
+  }
+}
+.game .gameProgress .opponent #photo {
+  height: 55vh;
+  width: 20vw;
+  margin: 0 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .opponent #photo {
+    height: 25vh;
+    width: 35vw;
+    margin: 0;
+  }
+}
+.game .gameProgress .opponent #botChoice {
+  font-size: 7rem;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .opponent #botChoice {
+    font-size: 2rem;
+    margin: 0 0.3rem;
+  }
+}
+.game .gameProgress .player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .player {
+    margin: 0;
+  }
+}
+.game .gameProgress .player #userChoice {
+  font-size: 7rem;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .player #userChoice {
+    font-size: 2rem;
+  }
+}
+.game .gameProgress .player #userIcon {
+  height: 35vh;
+  width: 25vh;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .player #userIcon {
+    height: 20vh;
+    width: 15vh;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+  }
+}
+.game .gameProgress .player #userIcon > i {
+  font-size: 13rem;
+  margin: 1rem auto;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .player #userIcon > i {
+    font-size: 7rem;
+    margin: 1rem auto;
+  }
+}
+.game .gameProgress .player #userIcon > .userName {
+  font-size: 1.7rem;
+}
+@media only screen and (max-width: 600px) {
+  .game .gameProgress .player #userIcon > .userName {
+    font-size: 1rem;
+  }
+}
+.game .gameLost {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game .gameLost > i {
+  color: #ab1919;
+  font-size: 15rem;
+  margin: 1.5rem auto;
+}
+.game .gameLost > .tryAgain {
+  background: #335577;
+  width: 70%;
+  cursor: pointer;
+  color: #ddd;
+  border-radius: 5rem;
+  text-align: center;
+  font-size: 2.7rem;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.3rem;
+  padding: 1.6rem;
+  transition: 0.4s;
+}
+.game .gameLost > .tryAgain:hover {
+  background: #224466;
+  color: #dff;
+  font-size: 2.8rem;
+  letter-spacing: 0.5rem;
+}
+
+.manipulate {
+  width: 100%;
+  height: 15vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 600px) {
+  .manipulate {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+.manipulate .chooseBtn {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 3rem;
+  background: #555;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.manipulate .chooseBtn:hover {
+  background: #335577;
+}
+.manipulate .chooseBtn i {
+  font-size: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .manipulate .chooseBtn {
+    width: 90%;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    height: 90%;
+  }
+}
+
+#introduction {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+}
+@media only screen and (max-width: 600px) {
+  #introduction {
+    flex-direction: column;
+  }
+}
+#introduction > #userName {
+  width: 50%;
+  height: 4rem;
+  border-radius: 1rem 0 0 1rem;
+  border: none;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.4rem;
+  background: #ddd;
+  color: #333;
+  transition: 0.5s;
+}
+#introduction > #userName::-moz-selection {
+  background: #333;
+  color: #ddd;
+}
+#introduction > #userName::selection {
+  background: #333;
+  color: #ddd;
+}
+#introduction > #userName:focus {
+  border: none;
+  font-size: 2.3rem;
+}
+@media only screen and (max-width: 600px) {
+  #introduction > #userName {
+    width: 90%;
+    border-radius: 0.7rem 0.7rem 0 0;
+    font-size: 1.5rem;
+  }
+  #introduction > #userName:focus {
+    font-size: 1.6rem;
+  }
+}
+#introduction > #userNameBtn {
+  width: 20%;
+  height: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  border: none;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.4rem;
+  background: #335577;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 600px) {
+  #introduction > #userNameBtn {
+    width: 90%;
+    border-radius: 0 0 0.7rem 0.7rem;
+  }
+}
+#introduction > #userNameBtn:hover {
+  background: #224466;
+}
+#introduction > #userNameBtn:disabled {
+  background: #3a4957;
+  cursor: not-allowed;
+}
+
+#newOpponent {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  #newOpponent {
+    text-align: center;
+  }
+}
+#newOpponent .newOpponentPhoto {
+  height: 50vh;
+  width: 20vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 3rem auto;
+}
+@media only screen and (max-width: 600px) {
+  #newOpponent .newOpponentPhoto {
+    height: 55vh;
+    width: 60vw;
+  }
+}
+#newOpponent .newOpponentIntroduction {
+  font-size: 3.5rem;
+  color: #ddd;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  margin: 0 auto;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media only screen and (max-width: 600px) {
+  #newOpponent .newOpponentIntroduction {
+    font-size: 2.7rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.botWins, .draft {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  color: #ddd;
+}
+@media only screen and (max-width: 600px) {
+  .botWins, .draft {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+.lifes {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #ddd;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .lifes {
+    top: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */

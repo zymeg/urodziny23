@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamień, papier, nożyce</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/c0471bd9c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="title">
+            <h1>Kamień, papier, nożyce!</h1>
+        </div>
+        <div class="game">
+            <div class="gameStart">
+                <div class="gameStartBtn">
+                    Rozpocznij gre!
+                </div>
+            </div>
+            <div class="gameProgress">
+                <div class="opponent">
+                    <div id="photo">
+
+                    </div>
+                    <div id="botChoice" style="display: none">
+                        > <i class=""></i>
+                    </div>
+                </div>
+                <div class="player">
+                    <div id="userChoice" style="display: none">
+                        <i class=""></i> < 
+                    </div>
+                    <div id="userIcon">
+                        <i class="fa-regular fa-user"></i>
+                        <div class="userName">Szymon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameLost">
+                <i class="fa-regular fa-thumbs-down"></i>
+                <div class="tryAgain">
+                    Try Again <i class="fa-solid fa-arrow-rotate-left"></i>
+                </div>
+            </div>
+        </div>
+        <div class="manipulate">
+            <div id="rockBtn" class="chooseBtn">
+                <i class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div id="paperBtn" class="chooseBtn">
+                <i class="fa-regular fa-hand"></i>
+            </div>
+            <div id="scissorsBtn" class="chooseBtn">
+                <i class="fa-regular fa-hand-scissors"></i>
+            </div>
+        </div>
+        <div id="introduction">
+            <input type="text" name="userName" id="userName" placeholder="Podaj swoje imię">
+            <input type="button" value="OK" id="userNameBtn" disabled>
+        </div>
+        <div id="newOpponent">
+            <div class="newOpponentPhoto">
+
+            </div>
+            <div class="newOpponentIntroduction"></div>
+        </div>
+    </div>
+    <div class="botWins">
+        <span>Spróbuj jeszcze raz</span>
+    </div>
+    <div class="draft">
+        <span>Remis</span>
+    </div>
+    <span class="lifes"></span>
+
+    <script src="script.js"></script>
+</body>
+</html>
